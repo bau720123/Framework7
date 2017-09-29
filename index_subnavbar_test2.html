@@ -1,0 +1,905 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="theme-color" content="#2196f3">
+        <link rel="stylesheet" href="css/framework7.ios.min.css">
+        <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+        <link rel="stylesheet" href="css/overwrite.css">
+        <title>Framework7 for Cordova</title></head>
+    
+    <body>
+        <div class="statusbar-overlay"></div>
+        <div class="panel-overlay"></div>
+        <span class="progressbar-infinite"></span>
+        <!--左側面板開始-->
+		<div class="panel panel-left panel-reveal">
+            <div class="view navbar-through">
+                <div class="pages">
+                    <div data-page="panel-left" class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <div class="center">左側面板</div>
+							</div>
+                        </div>
+                        <div class="page-content">
+                            <div class="list-block">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="item-link panel-close">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">點我關閉左側面板</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link hide-navbar">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">關閉navbar</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link show-navbar">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">打開navbar</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link hide-toolbar">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">關閉toolbar</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link show-toolbar">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">打開toolbar</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link alert-text-title-callback">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">警告</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link confirm-title-ok-cancel">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">確認</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link prompt-title-ok-cancel">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">提示</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link login-modal">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">登入模組</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link password-modal">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">密碼模組</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link open-preloader-title">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">預載</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link open-indicator">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">讀取</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link open-slider-modal">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">對話框輪播圖</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link open-tabs-modal">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">對話框標籤切換</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link ac-4">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">Action Sheet</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link open-login">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">登入畫面</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link open-info">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">打開picker</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link close-info">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">關閉picker</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link create-picker">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">動態新增picker</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+									<li>
+                                        <a href="#" class="item-link open-popup">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">打開popup</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link create-popup">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">動態新增popup</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">結束程式</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--左側面板結束-->
+        <!--右側面板開始-->
+        <div class="panel panel-right panel-reveal">
+            <div class="view navbar-through">
+                <div class="pages">
+                    <div data-page="panel-left" class="page">
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <div class="center">右側面板</div>
+							</div>
+                        </div>
+                        <div class="page-content">
+                            <div class="list-block">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="item-link panel-close">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">點我關閉右側面板</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="item-link">
+                                            <div class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-f7"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-title">結束程式</div>
+												</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--右側面板結束-->
+        <!--主要內容開始-->
+        <div class="views">
+            <!-- Your main view, should have "view-main" class-->
+            <div class="view view-main">
+                <!--HEADER開始-->
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="left">
+                            <a href="#" class="link icon-only open-left-panel">
+                                <i class="icon icon-bars"></i>
+                            </a>
+                        </div>
+                        <div class="center sliding">
+							<form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+								<div class="searchbar-input">
+									<input type="search" placeholder="請搜尋">
+									<a href="#" class="searchbar-clear"></a>
+								</div>
+                            <a href="#" class="searchbar-cancel">取消</a>
+							</form>
+						</div>
+                        <div class="right">
+                            <a href="#" class="link icon-only open-right-panel">
+                                <i class="icon icon-bars"></i>
+                            </a>
+                        </div>
+                        <div class="subnavbar">
+							<div class="toolbar-inner">
+								<a href="#tab1" class="tab-link active">
+									<i class="icon demo-icon-1">
+										<span class="badge bg-red">1</span>
+									</i>
+								</a>
+								<a href="#tab2" class="tab-link">
+									<i class="icon demo-icon-2">
+										<span class="badge bg-red">2</span>
+									</i>
+								</a>
+								<a href="#tab3" class="tab-link">
+									<i class="icon demo-icon-3">
+										<span class="badge bg-red">3</span>
+									</i>
+								</a>
+								<a href="#tab4" class="tab-link">
+									<i class="icon demo-icon-4">
+										<span class="badge bg-red">4</span>
+									</i>
+								</a>
+								<a href="#tab5" class="tab-link">
+									<i class="icon demo-icon-4">
+										<span class="badge bg-green">5</span>
+									</i>
+								</a>
+							</div>
+                        </div>
+                    </div>
+                </div>
+                <!--HEADER結束-->
+                <div class="pages navbar-through toolbar-through">
+					<div data-page="index" class="page with-subnavbar">
+						<div class="searchbar-overlay"></div>
+						<div class="page-content hide-bars-on-scroll">
+							<div class="searchbar-not-found">
+								找不到結果
+							</div>
+							<div class="tabs">
+								<div id="tab1" class="tab active">
+									<div class="list-block list-block-search searchbar-found">
+										<ul>
+											<li class="swipeout">
+												<a href="about2.html" class="item-link" data-ignore-cache="true">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">Camera</div>
+															<div class="item-after">
+																<span class="badge bg-green">攝影機</span>
+															</div>
+														</div>
+													</div>
+													<div class="swipeout-actions-right">
+														<a href="#" class="action1 bg-orange">右邊按鈕一</a>
+														<a href="#" class="swipeout-delete" data-confirm="你確定要刪除此項目？" data-confirm-title="右邊刪除？" data-close-on-cancel="true">右邊刪除</a>
+													</div>
+													<div class="swipeout-actions-left">
+														<a href="#" class="action1 bg-orange">左邊按鈕一</a>
+														<a href="#" class="swipeout-delete" data-confirm="你確定要刪除此項目？" data-confirm-title="左邊刪除？" data-close-on-cancel="true">左邊刪除</a>
+													</div>
+												</a>
+											</li>
+											<li class="swipeout">
+												<a href="qa.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">QA</div>
+															<div class="item-after">
+																<span class="badge bg-green">問與答</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="swipeout">
+												<a href="facebook.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">FACEBOOK</div>
+															<div class="item-after">
+																<span class="badge bg-green">FACEBOOK</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="swipeout">
+												<a href="buttons.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">BUTTONS</div>
+															<div class="item-after">
+																<span class="badge bg-green">BUTTONS</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="swipeout">
+												<a href="form.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">FORM</div>
+															<div class="item-after">
+																<span class="badge bg-green">FORM</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="swipeout">
+												<a href="smart.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">SMART</div>
+															<div class="item-after">
+																<span class="badge bg-green">SMART</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="swipeout">
+												<a href="tab.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">TAB</div>
+															<div class="item-after">
+																<span class="badge bg-green">TAB</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="swipeout">
+												<a href="slider.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">SLIDER</div>
+															<div class="item-after">
+																<span class="badge bg-green">SLIDER</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="swipeout">
+												<a href="mslider.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">Multiple SLIDER</div>
+															<div class="item-after">
+																<span class="badge bg-green">Multiple SLIDER</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="swipeout">
+												<a href="nestedslider.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">Nested SLIDER</div>
+															<div class="item-after">
+																<span class="badge bg-green">Nested SLIDER</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="swipeout">
+												<a href="photo-browser.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">Photo-browser</div>
+															<div class="item-after">
+																<span class="badge bg-green">Photo-browser</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="swipeout">
+												<a href="autocomplete.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">Autocomplete</div>
+															<div class="item-after">
+																<span class="badge bg-green">Autocomplete</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="swipeout">
+												<a href="picker.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">Picker</div>
+															<div class="item-after">
+																<span class="badge bg-green">Picker</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="swipeout">
+												<a href="calendar.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">Calendar</div>
+															<div class="item-after">
+																<span class="badge bg-green">Calendar</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="swipeout">
+												<a href="pulltorefresh.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">PullToRefresh</div>
+															<div class="item-after">
+																<span class="badge bg-green">PullToRefresh</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="swipeout">
+												<a href="infinitescroll.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">InfiniteScroll</div>
+															<div class="item-after">
+																<span class="badge bg-green">InfiniteScroll</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="swipeout">
+												<a href="notifications.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">Notifications</div>
+															<div class="item-after">
+																<span class="badge bg-green">Notifications</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="swipeout">
+												<a href="lazyload.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">LazyLoad</div>
+															<div class="item-after">
+																<span class="badge bg-green">LazyLoad</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+											<li class="swipeout">
+												<a href="deviceapi.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">DeviceApi</div>
+															<div class="item-after">
+																<span class="badge bg-green">DeviceApi</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div id="tab2" class="tab">
+									<div class="list-block list-block-search searchbar-found">
+										<ul>
+											<li>
+												<a href="lazyload.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">TEST2</div>
+															<div class="item-after">
+																<span class="badge bg-green">TEST2</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div id="tab3" class="tab">
+									<div class="list-block list-block-search searchbar-found">
+										<ul>
+											<li>
+												<a href="lazyload.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">TEST3</div>
+															<div class="item-after">
+																<span class="badge bg-green">TEST3</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div id="tab4" class="tab">
+									<div class="list-block list-block-search searchbar-found">
+										<ul>
+											<li>
+												<a href="lazyload.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">TEST4</div>
+															<div class="item-after">
+																<span class="badge bg-green">TEST4</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div id="tab5" class="tab">
+									<div class="list-block list-block-search searchbar-found">
+										<ul>
+											<li>
+												<a href="lazyload.html" class="item-link">
+													<div class="item-content">
+														<div class="item-media">
+															<i class="icon icon-f7"></i>
+														</div>
+														<div class="item-inner">
+															<div class="item-title">TEST5</div>
+															<div class="item-after">
+																<span class="badge bg-green">TEST5</span>
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!--主要內容結束-->
+        <!-- tablet-fullscreen：全畫面 -->
+        <div class="popup popup-about tablet-fullscreen">
+            <div class="content-block">
+                <p>
+                    <a class="close-popup">關閉popup</a>
+				</p>
+            </div>
+        </div>
+        <div class="popover popover-about">
+            <div class="popover-angle"></div>
+            <div class="popover-inner">
+                <div class="content-block">
+                    <p>About</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac diam ac quam euismod porta vel a nunc. Quisque sodales scelerisque est, at porta justo cursus ac.</p>
+                </div>
+            </div>
+        </div>
+        <div class="popover popover-links">
+            <div class="popover-angle"></div>
+            <div class="popover-inner">
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <a href="#" class="list-button item-link">Link 1</a>
+						</li>
+                        <li>
+                            <a href="#" class="list-button item-link">Link 2</a>
+						</li>
+                        <li>
+                            <a href="#" class="list-button item-link">Link 3</a>
+						</li>
+                        <li>
+                            <a href="#" class="list-button item-link">Link 4</a>
+						</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="login-screen">
+            <div class="view">
+                <div class="page">
+                    <div class="page-content login-screen-content">
+                        <div class="login-screen-title">我的應用程式</div>
+                        <form>
+                            <div class="list-block">
+                                <ul>
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">帳號</div>
+                                            <div class="item-input">
+                                                <input type="text" name="username" placeholder="你的帳號">
+											</div>
+                                        </div>
+                                    </li>
+                                    <li class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">密碼</div>
+                                            <div class="item-input">
+                                                <input type="password" name="password" placeholder="你的密碼">
+											</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="list-block">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="item-link list-button">登入</a></li>
+                                </ul>
+                                <div class="list-block-label">
+                                    <p>一些想說的話</p>
+                                    <p>
+                                        <a href="#" class="close-login-screen">關閉登入畫面</a>
+									</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="picker-modal picker-info">
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <div class="left"></div>
+                    <div class="right">
+                        <a href="#" class="close-picker">完成</a>
+					</div>
+                </div>
+            </div>
+            <div class="picker-modal-inner">
+                <div class="content-block">
+                    <p>內容</p>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/framework7.min.js"></script>
+        <script type="text/javascript" src="js/javascript.js"></script>
+    </body>
+
+</html>
