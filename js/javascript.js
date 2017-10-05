@@ -1642,6 +1642,29 @@ var page = e.detail.page;
 				}
 		});
 	}
+	
+	if(page.name === 'toast')
+	{
+		var options =
+		{
+			onHide: function ()
+			{
+            myApp.alert('隱藏');
+            },
+            duration: 2000
+        }
+	var toast = myApp.toast('', '<div>☆</div>', options);
+		
+		$$('#btnshow').click(function ()
+		{
+		toast.show("一段長的訊息");
+		});
+		
+		$$('#btnhide').click(function ()
+		{
+		toast.hide();
+		});
+	}
 })
 
 /*$$(document).on('pageInit', '.page[data-page="about"]', function(e)
