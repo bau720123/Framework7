@@ -1605,6 +1605,43 @@ var page = e.detail.page;
 		);
 		});
 	}
+	
+	if(page.name === 'keypad')
+	{
+	var valueMaxLength = 4;	
+		var numpad = myApp.keypad(
+		{
+		//container: , //
+		input: '#demo-numpad', //綁定成為虛擬鍵盤的HTML元素
+		scrollToInput: true, //是否在鍵盤打開時滾動視口（頁面內容）
+		inputReadOnly: true, //是否在鍵盤打開時讓綁定的HTML元素為唯讀的狀態
+		convertToPopover: true, //在大屏幕上（iPad上）將鍵盤模式轉換為Popover
+		onlyOnPopover: false, //啟用它，鍵盤將始終在Popover中打開
+		cssClass: '', //在鍵盤模式上設置的附加CSS類名稱
+		toolbar: true, //是否啟用鍵盤模式工具欄
+		toolbarCloseText: '完成', //鍵盤模式工具欄上的按鈕名稱
+		//toolbarTemplate: '' //自定義虛擬鍵盤得HTML樣式
+		//type: 'calculator', //是否啟用計算機模式
+		valueMaxLength: valueMaxLength, //最多可輸入幾個字元
+		dotButton: false, //
+				formatValue: function(p, value)
+				{
+				value = value.toString();
+				return ('****').substring(0, value.length) + ('____').substring(0, valueMaxLength - value.length);
+				},
+				onChange: function (p, value)
+				{
+				value = value.toString();
+					if (value.length === valueMaxLength)
+					{
+						myApp.alert('謝謝！ 你的密碼是︰<b>' + value + '</b>', function ()
+						{
+						//mainView.router.back();
+						});
+					}
+				}
+		});
+	}
 })
 
 /*$$(document).on('pageInit', '.page[data-page="about"]', function(e)
