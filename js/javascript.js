@@ -118,10 +118,87 @@ function createContentPage() {
 	return;
 }
 
+initTourGuide = function ()
+{
+var tourSteps = [];
+	var options =
+	{
+	previousButton: true, //是否顯示上一步的按鈕
+	nextButtonText: '下一步', //下一步按鈕的文字
+	endTourButtonText: '完成教學', //最後ㄧ步時的按鈕文字 
+	previousButtonText: '上一步', //上一步按鈕的文字
+	template: '', //導覽步驟的可選模板，默認為defaultTourGuideTemplate
+	customCSS: '', //導覽步驟的css類別，默認為"tour-guide-popover"
+	};
+    
+    tourSteps.push(
+	{
+	step: 0, 
+	header: '左邊選單', 
+	message: '點擊這或從螢幕最左邊開始滑動，即可打開左邊選單', 
+	element: "body > div.views > div > div.navbar > div > div.left > a", 
+		action: function()
+        {
+
+        }
+    });
+	
+	tourSteps.push(
+	{
+	step: 1, 
+	header: '右邊選單', 
+	message: '點擊這或從螢幕最右邊開始滑動，即可打開右邊選單', 
+	element: "body > div.views > div > div.navbar > div > div.right > a", 
+		action: function()
+        {
+
+        }
+    });
+	
+	tourSteps.push(
+	{
+	step: 2, 
+	header: '上方搜尋機制', 
+	message: '點擊搜尋框後並輸入文字，即會看到最新的塞選結果', 
+	element: "body > div.views > div > div.navbar > div > div.center > form", 
+		action: function()
+        {
+
+        }
+    });
+	
+	tourSteps.push(
+	{
+	step: 3, 
+	header: '頁籤切換', 
+	message: '點擊或左右滑動頁面即可切換不同的類別清單', 
+	element: "body > div.views > div > div.navbar > div > div.subnavbar", 
+		action: function()
+        {
+
+        }
+    });
+	
+	tourSteps.push(
+	{
+	step: 4, 
+	header: '主要內容', 
+	message: '點擊該區塊中的各個項目後，依照畫面指示來展示該功能', 
+	element: "body > div.views > div > div.pages", 
+		action: function()
+        {
+
+        }
+    });
+    
+    tourguide = myApp.tourguide(tourSteps, options);
+};
+
 //首頁觸發
 myApp.onPageInit('index', function(page)
 {
-	
+initTourGuide();
+tourguide.showTour();
 }).trigger();
 
 $$(document).on('pageInit', function(e)
