@@ -118,7 +118,7 @@ function createContentPage() {
 	return;
 }
 
-initTourGuide = function ()
+var initTourGuide = function ()
 {
 var tourSteps = [];
 	var options =
