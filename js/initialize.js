@@ -1,7 +1,6 @@
 var endMessage_title = "提醒您";
 var endMessage_botton = "確定,取消";
 
-
 //document.addEventListener("backbutton", function() { navigator.app.exitApp(); }, false); //回上一頁鈕
 
 if(navigator.userAgent.match(/Android/i))
