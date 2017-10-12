@@ -118,10 +118,87 @@ function createContentPage() {
 	return;
 }
 
+var initTourGuide = function ()
+{
+var tourSteps = [];
+	var options =
+	{
+	previousButton: true, //是否顯示上一步的按鈕
+	nextButtonText: '下一步', //下一步按鈕的文字
+	endTourButtonText: '完成教學', //最後ㄧ步時的按鈕文字 
+	previousButtonText: '上一步', //上一步按鈕的文字
+	template: '', //導覽步驟的可選模板，默認為defaultTourGuideTemplate
+	customCSS: '', //導覽步驟的css類別，默認為"tour-guide-popover"
+	};
+    
+    tourSteps.push(
+	{
+	step: 0, 
+	header: '左邊選單', 
+	message: '點擊這或從螢幕最左邊開始滑動，即可打開左邊選單', 
+	element: "body > div.views > div > div.navbar > div > div.left > a", 
+		action: function()
+        {
+
+        }
+    });
+	
+	tourSteps.push(
+	{
+	step: 1, 
+	header: '右邊選單', 
+	message: '點擊這或從螢幕最右邊開始滑動，即可打開右邊選單', 
+	element: "body > div.views > div > div.navbar > div > div.right > a", 
+		action: function()
+        {
+
+        }
+    });
+	
+	tourSteps.push(
+	{
+	step: 2, 
+	header: '上方搜尋機制', 
+	message: '點擊搜尋框後並輸入文字，即會看到最新的塞選結果', 
+	element: "body > div.views > div > div.navbar > div > div.center > form", 
+		action: function()
+        {
+
+        }
+    });
+	
+	tourSteps.push(
+	{
+	step: 3, 
+	header: '頁籤切換', 
+	message: '點擊或左右滑動頁面即可切換不同的類別清單', 
+	element: "body > div.views > div > div.navbar > div > div.subnavbar", 
+		action: function()
+        {
+
+        }
+    });
+	
+	tourSteps.push(
+	{
+	step: 4, 
+	header: '主要內容', 
+	message: '點擊該區塊中的各個項目後，依照畫面指示來展示該功能', 
+	element: "body > div.views > div > div.pages", 
+		action: function()
+        {
+
+        }
+    });
+    
+    tourguide = myApp.tourguide(tourSteps, options);
+};
+
 //首頁觸發
 myApp.onPageInit('index', function(page)
 {
-	
+initTourGuide();
+tourguide.showTour();
 }).trigger();
 
 $$(document).on('pageInit', function(e)
@@ -1603,6 +1680,66 @@ var page = e.detail.page;
 		'minimalUi：' + myApp.device.minimalUi + '<br>' + 
 		'statusBar：' + myApp.device.statusBar
 		);
+		});
+	}
+	
+	if(page.name === 'keypad')
+	{
+	var valueMaxLength = 4;	
+		var numpad = myApp.keypad(
+		{
+		//container: , //
+		input: '#demo-numpad', //綁定成為虛擬鍵盤的HTML元素
+		scrollToInput: true, //是否在鍵盤打開時滾動視口（頁面內容）
+		inputReadOnly: true, //是否在鍵盤打開時讓綁定的HTML元素為唯讀的狀態
+		convertToPopover: true, //在大屏幕上（iPad上）將鍵盤模式轉換為Popover
+		onlyOnPopover: false, //啟用它，鍵盤將始終在Popover中打開
+		cssClass: '', //在鍵盤模式上設置的附加CSS類名稱
+		toolbar: true, //是否啟用鍵盤模式工具欄
+		toolbarCloseText: '完成', //鍵盤模式工具欄上的按鈕名稱
+		//toolbarTemplate: '' //自定義虛擬鍵盤得HTML樣式
+		//type: 'calculator', //是否啟用計算機模式
+		valueMaxLength: valueMaxLength, //最多可輸入幾個字元
+		dotButton: false, //
+				formatValue: function(p, value)
+				{
+				value = value.toString();
+				return ('****').substring(0, value.length) + ('____').substring(0, valueMaxLength - value.length);
+				},
+				onChange: function (p, value)
+				{
+				value = value.toString();
+					if (value.length === valueMaxLength)
+					{
+						myApp.alert('謝謝！ 你的密碼是︰<b>' + value + '</b>', function ()
+						{
+						//mainView.router.back();
+						});
+					}
+				}
+		});
+	}
+	
+	if(page.name === 'toast')
+	{
+		var options =
+		{
+			onHide: function ()
+			{
+            myApp.alert('隱藏');
+            },
+            duration: 2000
+        }
+	var toast = myApp.toast('', '<div>☆</div>', options);
+		
+		$$('#btnshow').click(function ()
+		{
+		toast.show("一段長的訊息");
+		});
+		
+		$$('#btnhide').click(function ()
+		{
+		toast.hide();
 		});
 	}
 })
